@@ -1,0 +1,311 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furnix - Quality Furniture for Your Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      background-size: cover;
+      background-position: center;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    .partner-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .partner-slider img {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      margin-right: 1rem;
+      height: 100px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-2xl font-bold">Furnix</div>
+      <div class="space-x-6">
+        <a href="#home" class="hover:text-gray-300">Home</a>
+        <a href="#products" class="hover:text-gray-300">Products</a>
+        <a href="#about" class="hover:text-gray-300">About</a>
+        <a href="#community" class="hover:text-gray-300">Community</a>
+        <a href="#faq" class="hover:text-gray-300">FAQ</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero h-96 flex items-center justify-center text-white">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Furnix</h1>
+      <p class="text-lg md:text-xl mb-6">Discover quality furniture for every room in your home</p>
+      <a href="#products" class="bg-yellow-500 text-black px-6 py-3 rounded-full hover:bg-yellow-600">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-12 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Furniture Collection</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Product Card 1 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src="https://i.pinimg.com/736x/3d/07/9e/3d079e78a775da8332ebd99fe41d3826.jpg" alt="Modern Sofa" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Modern Sofa</h3>
+          <p class="text-gray-600">Comfortable and stylish for your living room.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 45,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src="https://i.pinimg.com/736x/26/88/e5/2688e5e3b0a6ca2834fe5ccf84a53297.jpg" alt="Dining Table" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Dining Table</h3>
+          <p class="text-gray-600">Elegant design for family gatherings.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 60,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src="https://m.media-amazon.com/images/I/81adUvq2HZL.jpg" alt ="King Size Bed" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">King Size Bed</h3>
+          <p class="text-gray-600">Luxury and comfort for a good night's sleep.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 80,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 4 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src="https://quatropi.com/cdn/shop/files/quatropi-hickson-modern-wooden-coffee-table-black-165x75cm-1149870612.jpg?v=1742547224.jpg" alt ="Wooden Coffee Table" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Wooden Coffee Table</h3>
+          <p class="text-gray-600">Minimalist design to complement your living space.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 25,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 5 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src=https://m.media-amazon.com/images/I/8178LlBcIkL.jpg alt="Velvet Armchair" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Velvet Armchair</h3>
+          <p class="text-gray-600">Cozy and chic for a modern lounge area.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 35,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 6 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src=https://i.etsystatic.com/15145452/r/il/aa48c8/1458065277/il_570xN.1458065277_rhov.jpg alt="Scandinavian Bookshelf" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Scandinavian Bookshelf</h3>
+          <p class="text-gray-600">Sleek storage solution for books and decor.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 50,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 7 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src=https://i.pinimg.com/236x/f6/61/ea/f661ea16ac675f53f5a54457d584da42.jpg alt="Modern Wardrobe" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Modern Wardrobe</h3>
+          <p class="text-gray-600">Spacious and stylish for your bedroom storage.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 90,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 8 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src=https://m.media-amazon.com/images/I/81fD-kLJGBL.jpg alt="Vintage Dresser" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Vintage Dresser</h3>
+          <p class="text-gray-600">Classic charm with ample drawer space.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 55,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+        <!-- Product Card 9 -->
+        <div class="product-card bg-white p-6 rounded-lg shadow-md transition-transform duration-300">
+          <img src=https://m.media-amazon.com/images/I/81hd2FwKweL._AC_UF894,1000_QL80_.jpg alt="Minimalist TV Stand" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Minimalist TV Stand</h3>
+          <p class="text-gray-600">Sleek design for your entertainment setup.</p>
+          <p class="text-yellow-500 font-bold mt-2">KSh 30,000</p>
+          <button class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Furnix</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Furnix is your one-stop shop for high-quality furniture in Kenya. We offer a wide range of modern and classic designs to suit every taste and budget, ensuring your home is both stylish and comfortable.</p>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="py-12 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Community</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">Join the Furnix community! Share your home decor ideas, get inspired by others, and participate in our events to connect with fellow furniture enthusiasts.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Customer Stories</h3>
+          <p class="text-gray-600">See how our customers have transformed their homes with Furnix furniture.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Design Tips</h3>
+          <p class="text-gray-600">Get expert advice on styling your space from our design community.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Events & Workshops</h3>
+          <p class="text-gray-600">Join us for workshops and events to learn about interior design trends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-2">What is your return policy?</h3>
+          <p class="text-gray-600">We offer a 30-day return policy for unused items in their original condition. Contact our support team for assistance.</p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-2">Do you offer delivery services?</h3>
+          <p class="text-gray-600">Yes, we provide nationwide delivery across Kenya. Delivery fees vary based on location.</p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-2">Can I customize my furniture?</h3>
+          <p class="text-gray-600">Certain products can be customized. Please reach out to our team for details on customization options.</p>
+        </div>
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-2">What payment methods do you accept?</h3>
+          <p class="text-gray-600">We accept M-Pesa, credit/debit cards, and bank transfers for your convenience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section id="partners" class="py-12 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Partners</h2>
+      <div class="partner-slider">
+        <img src=https://images.seeklogo.com/logo-png/32/3/safaricom-twaweza-logo-png_seeklogo-325706.png alt="Safaricom" class="h-24">
+        <img src=https://cdn.iconscout.com/icon/free/png-256/free-equity-bank-icon-download-in-svg-png-gif-file-formats--money-finance-banking-brand-logo-major-brands-logos-pack-icons-8715821.png alt="Equity Bank" class="h-24">
+        <img src=https://play-lh.googleusercontent.com/6_MWt-GdLtPDlJJR92pNzlOrKzUkdbhlEq5zRlpLfqMR0BMNIydJd0b8Tyk_Tc7lgfsN alt="Absa Bank Kenya" class="h-24">
+        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStAo5AZEpdZDYiahSFavhTsVDBYFv7DTLIzg&s alt="Airtel" class="h-24">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <p class="text-gray-600 mb-4">Have questions? Reach out to us!</p>
+      <!-- Message Form -->
+      <div class="max-w-lg mx-auto mb-8">
+        <div id="form-message" class="text-green-600 hidden mb-4">Message sent successfully!</div>
+        <div class="space-y-4">
+          <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <textarea id="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+          <button id="submit-message" class="bg-yellow-500 text-black px-6 py-3 rounded-md hover:bg-yellow-600">Send Message</button>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-4">
+        <a href="#" class="text-gray-800 hover:text-yellow-500"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#" class="text-gray-800 hover:text-yellow-500"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#" class="text-gray-800 hover:text-yellow-500"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
+      <p class="mt-4">Email: info@furnix.co.ke | Phone: +254 123 456 789</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Furnix. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Message form handling
+    document.getElementById('submit-message').addEventListener('click', function() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (name && email && message) {
+        console.log('Message Submitted:', { name, email, message });
+        document.getElementById('form-message').classList.remove('hidden');
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+        setTimeout(() => {
+          document.getElementById('form-message').classList.add('hidden');
+        }, 3000);
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+  </script>
+</body>
+</html><!-- ...existing code... -->
+<!-- Fix smooth scroll to check if target exists -->
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Message form handling
+  document.getElementById('submit-message').addEventListener('click', function() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    if (name && email && message) {
+      console.log('Message Submitted:', { name, email, message });
+      document.getElementById('form-message').classList.remove('hidden');
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+      setTimeout(() => {
+        document.getElementById('form-message').classList.add('hidden');
+      }, 3000);
+    } else {
+      alert('Please fill in all fields.');
+    }
+  });
+</script>
+<!-- ...existing code... -->
+
+<!-- Add type="button" to all Add to Cart and Send Message buttons -->
+<!-- Example for one button: -->
+<button type="button" class="mt-4 bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Add to Cart</button>
+<!-- ...repeat for all similar buttons... -->
+<button type="button" id="submit-message" class="bg-yellow-500 text-black px-6 py-3 rounded-md hover:bg-yellow-600">Send Message</button>
+<!-- ...existing code... -->
